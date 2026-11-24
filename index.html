@@ -1,0 +1,874 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Jamaica Advertising Network | Halifax Virtual Media Masters</title>
+<meta name="description" content="Digital advertising, interactive touchscreens and tourism technology in Negril, Montego Bay and Ocho Rios, Jamaica.">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#062c35;
+  --teal:#087278;
+  --gold:#eac36d;
+  --cream:#faf8f2;
+  --ink:#173139;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'DM Sans',Arial,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+
+header{
+  background:var(--navy);
+  color:white;
+  padding:12px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+header img{
+  display:block;
+  width:205px;
+  height:94px;
+  object-fit:contain;
+  background:white;
+  border-radius:5px;
+}
+nav{display:flex;flex-wrap:wrap;gap:23px}
+nav a{text-decoration:none;font-size:14px}
+nav .highlight{color:var(--gold);font-weight:700}
+
+.hero{
+  background:
+    linear-gradient(120deg,#062c35ee,#087278d9),
+    radial-gradient(circle at 85% 0%,#6cd5ce,transparent 50%);
+  padding:105px 20px;
+  color:white;
+  text-align:center;
+}
+.eyebrow{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.hero h1{
+  font-size:clamp(39px,6vw,75px);
+  line-height:1.12;
+  max-width:950px;
+  margin:20px auto;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+  max-width:700px;
+  margin:0 auto 30px;
+  line-height:1.7;
+  font-size:19px;
+}
+.btn{
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:30px;
+  background:var(--gold);
+  color:#172c31;
+  text-decoration:none;
+  font-weight:700;
+  margin:6px;
+  border:0;
+  cursor:pointer;
+}
+.btn.outline{
+  border:1px solid white;
+  color:white;
+  background:transparent;
+}
+
+.section{
+  max-width:1220px;
+  margin:auto;
+  padding:70px 22px;
+}
+.section h2{
+  font-size:clamp(32px,4vw,49px);
+  text-align:center;
+  margin:12px 0;
+}
+.intro{
+  max-width:790px;
+  margin:0 auto 35px;
+  text-align:center;
+  line-height:1.75;
+  color:#53696d;
+}
+.center{text-align:center}
+
+.destinations,.packages,.features{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.tile,.package,.feature{
+  background:white;
+  border:1px solid #dbe6e2;
+  border-radius:16px;
+  padding:26px;
+  box-shadow:0 8px 30px #003b4210;
+}
+.tile h3,.package h3{
+  font-size:28px;
+  margin:0 0 10px;
+}
+.tile p,.package p,.feature p{
+  line-height:1.7;
+  color:#53696d;
+}
+.tile .link{
+  color:#087278;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* JAPEX SHOWCASE */
+
+.japex-section{
+  background:#062c35;
+  color:white;
+}
+.japex-section .intro{color:#d2e5e4}
+
+.japex-lead{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:30px;
+  align-items:center;
+  margin-bottom:36px;
+}
+.japex-lead img{
+  width:100%;
+  display:block;
+  border-radius:16px;
+  box-shadow:0 14px 40px #0005;
+}
+.japex-lead h3{
+  font-size:clamp(27px,3vw,39px);
+  margin:0 0 16px;
+  color:var(--gold);
+}
+.japex-lead p{
+  line-height:1.8;
+  color:#e1eeed;
+}
+.japex-label{
+  display:inline-block;
+  background:#ffffff18;
+  border:1px solid #ffffff40;
+  border-radius:30px;
+  padding:8px 14px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  margin-bottom:18px;
+}
+.japex-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+}
+.japex-gallery figure{
+  margin:0;
+  background:#ffffff12;
+  border:1px solid #ffffff30;
+  border-radius:16px;
+  overflow:hidden;
+}
+.japex-gallery img{
+  display:block;
+  width:100%;
+  height:350px;
+  object-fit:contain;
+  background:#031c23;
+}
+.japex-gallery figcaption{
+  padding:18px;
+  font-size:15px;
+  line-height:1.6;
+  color:#e5f0ee;
+}
+.japex-video-wrap{
+  margin-top:40px;
+  background:#ffffff10;
+  border:1px solid #ffffff30;
+  border-radius:18px;
+  padding:25px;
+  text-align:center;
+}
+.japex-video-wrap h3{
+  font-size:30px;
+  margin:0 0 12px;
+}
+.japex-video-wrap p{
+  color:#d2e5e4;
+  line-height:1.7;
+}
+
+/* CORRECTED PORTRAIT VIDEO */
+
+.japex-video{
+  display:block;
+  width:100%;
+  max-width:360px;
+  aspect-ratio:9/16;
+  height:auto;
+  margin:22px auto 0;
+  border-radius:12px;
+  background:black;
+  object-fit:contain;
+}
+
+.japex-cta{
+  text-align:center;
+  margin-top:32px;
+}
+.japex-cta p{
+  color:#d2e5e4;
+  line-height:1.7;
+}
+
+/* NEGRIL ADVERTISEMENT GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+}
+.gallery figure{
+  margin:0;
+  background:white;
+  border:1px solid #dbe6e2;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 32px #003b4213;
+}
+.gallery img{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:contain;
+  background:#e6f1ed;
+}
+.gallery figcaption{
+  padding:16px 20px;
+  font-weight:700;
+}
+
+.band{background:#e8f4f1}
+.price{font-size:39px;font-weight:700}
+.discount{
+  margin:28px 0 0;
+  background:#e9f5f2;
+  border-radius:16px;
+  padding:28px;
+  text-align:center;
+}
+.discount h3{
+  font-size:28px;
+  margin:0 0 12px;
+}
+.discount p{line-height:1.7}
+
+.host{
+  background:linear-gradient(110deg,#06343d,#087b7b);
+  color:white;
+}
+.host-inner{
+  max-width:1220px;
+  margin:auto;
+  padding:70px 22px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+.host h2{font-size:42px}
+.host p{line-height:1.75}
+.shares{display:flex;gap:15px}
+.share{
+  background:var(--gold);
+  color:#152c32;
+  border-radius:14px;
+  padding:22px;
+  flex:1;
+  text-align:center;
+}
+.share strong{
+  font-size:43px;
+  display:block;
+}
+
+.form-wrap{
+  max-width:920px;
+  margin:auto;
+  background:white;
+  border:1px solid #dbe6e2;
+  border-radius:16px;
+  padding:30px;
+}
+.fields{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-size:14px;
+  font-weight:700;
+}
+.full{grid-column:1/-1}
+.field input,.field select,.field textarea{
+  font:inherit;
+  padding:13px;
+  border:1px solid #b9ccca;
+  border-radius:8px;
+  width:100%;
+  background:white;
+}
+.field textarea{min-height:110px}
+
+.foot{
+  background:#041f27;
+  color:#d3e5e3;
+  padding:28px 5%;
+  font-size:13px;
+  text-align:center;
+}
+.foot a{color:var(--gold)}
+
+@media(max-width:800px){
+  header{flex-direction:column}
+  nav{justify-content:center;gap:15px}
+  .destinations,.packages,.features,
+  .gallery,.host-inner,.fields,
+  .japex-lead,.japex-gallery{
+    grid-template-columns:1fr;
+  }
+  .japex-gallery img{height:auto;max-height:420px}
+  .shares{flex-direction:column}
+  .hero{padding:70px 20px}
+  .section{padding:50px 18px}
+}
+
+/* DIGITAL SIGNAGE & MENU BOARDS */
+.digital-signage{background:#e8f4f1}
+.digital-showcase{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;margin-top:30px}
+.digital-showcase figure{margin:0;background:white;border:1px solid #dbe6e2;border-radius:16px;overflow:hidden;box-shadow:0 12px 34px #003b4218}
+.digital-showcase img{display:block;width:100%;height:auto}
+.digital-showcase figcaption{padding:15px 18px;color:#53696d;font-size:14px;line-height:1.6}
+.digital-copy h3{font-size:clamp(25px,3vw,35px);margin:0 0 12px;color:var(--navy)}
+.digital-copy p{line-height:1.8;color:#405a60}
+.digital-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.digital-benefits article{background:white;border:1px solid #dbe6e2;border-radius:14px;padding:20px}
+.digital-benefits h3{font-size:22px;margin:0 0 9px}
+.digital-benefits p{line-height:1.65;margin:0;color:#53696d}
+@media(max-width:800px){.digital-showcase,.digital-benefits{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html">
+<img src="assets/Halifax%20Virtual%20Media%20Masters%20Logo.png" alt="Official Halifax Virtual Media Masters & Events Ltd. logo">
+</a>
+<nav>
+<a href="#locations">Destinations</a>
+<a href="#japex">JAPEX 2026</a>
+<a href="#digital-signage">Digital Signage</a>
+<a href="#negril-businesses">Negril Businesses</a>
+<a href="#screen-hosts">Screen Hosts</a>
+<a href="#packages">Packages</a>
+<a class="highlight" href="payment.html">Payments</a>
+<a href="#host">Become a Host</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<main>
+
+<!-- HOMEPAGE HERO -->
+
+<section class="hero">
+<div class="eyebrow">Jamaica Advertising Network</div>
+<h1>Your Business. Our Network.<br><span>All Across Jamaica.</span></h1>
+<p>Connect with visitors and local customers through engaging digital advertising in tourism and commercial settings across Jamaica.</p>
+<a class="btn" href="payment.html">Explore Advertising Packages</a>
+<a class="btn outline" href="#japex">See Our JAPEX Exhibition</a>
+</section>
+
+<!-- DESTINATIONS -->
+
+<section class="section" id="locations">
+<div class="eyebrow center">Our Destinations</div>
+<h2>Discover Jamaica's Advertising Opportunities</h2>
+<p class="intro">Explore opportunities in Negril, Montego Bay and Ocho Rios. Contact us to confirm screen availability and locations.</p>
+
+<div class="destinations">
+<article class="tile">
+<h3>Negril</h3>
+<p>Discover businesses and hospitality destinations featured in our Negril advertising creative.</p>
+<a class="link" href="#negril-businesses">View Negril Businesses</a>
+</article>
+
+<article class="tile">
+<h3>Montego Bay</h3>
+<p>Promote your business to residents and visitors in one of Jamaica's major tourism centres.</p>
+</article>
+
+<article class="tile">
+<h3>Ocho Rios</h3>
+<p>Reach audiences interested in attractions, tours, hospitality, dining and shopping.</p>
+</article>
+</div>
+</section>
+
+<!-- JAPEX 2026 SHOWCASE -->
+
+<section class="japex-section" id="japex">
+<div class="section">
+
+<div class="eyebrow center">Our Technology in Action</div>
+<h2>VMM at JAPEX 2026</h2>
+
+<p class="intro">
+Halifax Virtual Media Masters &amp; Events Ltd. showcased its interactive touchscreen and digital advertising technology at JAPEX 2026 in Ocho Rios, Jamaica.
+</p>
+
+<div class="japex-lead">
+
+<img
+  src="assets/20260915_160800_HDR.jpg"
+  alt="Halifax Virtual Media Masters exhibition booth at JAPEX 2026 showing the interactive touchscreen and digital advertising display"
+  loading="lazy">
+
+<div>
+<div class="japex-label">JAPEX 2026 · Ocho Rios, Jamaica</div>
+
+<h3>Connecting Nova Scotia and Jamaica</h3>
+
+<p>
+At JAPEX 2026, we introduced visitors and tourism industry representatives to our innovative digital advertising and interactive technology solutions.
+</p>
+
+<p>
+Our exhibition featured a <strong>50-inch interactive touchscreen kiosk</strong> and a <strong>50-inch network advertising display</strong>, demonstrating how tourism and hospitality businesses can connect with customers through engaging digital experiences.
+</p>
+
+<p>
+From interactive visitor information to digital advertising, QR-code promotions and business partnerships, our solutions are designed to help businesses increase visibility and create new revenue opportunities.
+</p>
+</div>
+</div>
+
+<div class="japex-gallery">
+
+<figure>
+<img
+  src="assets/japex.jpg"
+  alt="Close-up of the 50-inch digital advertising screen displayed at JAPEX 2026"
+  loading="lazy">
+<figcaption>
+<strong>50-Inch Network Advertising Display</strong><br>
+Showcasing digital signage, QR-code referrals, restaurant menus and advertising revenue opportunities.
+</figcaption>
+</figure>
+
+<figure>
+<img
+  src="assets/raldane.jpg"
+  alt="JAPEX attendees standing beside the Halifax Virtual Media Masters interactive touchscreen kiosk"
+  loading="lazy">
+<figcaption>
+<strong>50-Inch Interactive Touchscreen Kiosk</strong><br>
+Our interactive technology on display at JAPEX, designed to connect visitors with tourism information and local businesses.
+</figcaption>
+</figure>
+
+</div>
+
+<div class="japex-video-wrap">
+
+<div class="eyebrow center">Watch Our Exhibition Video</div>
+<h3>Experience Our JAPEX Booth</h3>
+
+<p>
+Take a closer look at Halifax Virtual Media Masters &amp; Events Ltd.'s technology showcase at JAPEX 2026.
+</p>
+
+<video
+  class="japex-video"
+  controls
+  preload="metadata"
+  playsinline
+  poster="assets/20260915_160800_HDR.jpg">
+  <source src="assets/JAPEX_2026_portrait.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+
+<div class="japex-cta">
+<p>
+Interested in interactive touchscreen technology, digital advertising or hosting a screen at your business?
+</p>
+<a class="btn" href="#contact">Contact Our Team</a>
+<a class="btn outline" href="payment.html">Explore Advertising Packages</a>
+</div>
+
+</div>
+</section>
+
+<!-- DIGITAL SIGNAGE & DIGITAL MENU SYSTEMS -->
+<section class="digital-signage" id="digital-signage">
+  <div class="section">
+    <div class="eyebrow center">Digital Signage &amp; Interactive Technology</div>
+    <h2>Over 25 Years of Experience</h2>
+    <p class="intro">Halifax Virtual Media Masters &amp; Events Ltd. brings over 25 years of experience in interactive technology and digital signage to businesses in Jamaica. We provide the screens <strong>and</strong> create the custom content that brings them to life.</p>
+    <div class="digital-showcase">
+      <figure>
+        <img src="assets/current-mood-digital-menu-installation.jpg" alt="Actual installation at Current Mood in Negril showing the restaurant's digital menu screen beside a tourism advertising screen" loading="lazy">
+        <figcaption><strong>Current Mood Restaurant, Negril</strong> — our first digital menu system installation in Jamaica, shown alongside a tourism advertising display. Actual installation photograph.</figcaption>
+      </figure>
+      <div class="digital-copy">
+        <div class="eyebrow">Our First Digital Menu Installation in Negril</div>
+        <h3>Now on Display at Current Mood</h3>
+        <p>We are pleased to showcase our first digital menu system at <strong>Current Mood Restaurant, Negril Beach Club</strong>. The installation demonstrates how a restaurant menu and tourism advertising can be presented on neighbouring digital screens.</p>
+        <p>From easy-to-read food and beverage menus to daily specials, promotions and visitor information, we design engaging digital content tailored to each business.</p>
+        <a class="btn" href="#contact">Request a Digital Signage Quote</a>
+        <div style="margin-top:22px;padding:20px;border-left:4px solid var(--gold);background:#fff;border-radius:10px">
+          <h3 style="font-size:23px;margin:0 0 10px">Explore Our Canadian Digital Menu Projects</h3>
+          <p style="margin:0 0 14px">Our experience extends beyond Jamaica. See examples of digital menu projects created for businesses in Canada.</p>
+          <a class="btn" href="https://www.virtualmediamasters.net/digital-menus/" target="_blank" rel="noopener noreferrer">View Our Canadian Digital Menu Projects</a>
+        </div>
+      </div>
+    </div>
+    <div class="digital-benefits">
+      <article><h3>Digital Menu Boards</h3><p>Showcase menus, prices, specials and promotions with professionally designed displays.</p></article>
+      <article><h3>Business &amp; Tourism Displays</h3><p>Share advertising, visitor information and local attractions on eye-catching screens.</p></article>
+      <article><h3>Custom Content &amp; Support</h3><p>We create screen-ready graphics and presentations, with content updates tailored to your needs.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED NEGRIL BUSINESSES -->
+
+<section class="band" id="negril-businesses">
+<div class="section">
+
+<div class="eyebrow center">Featured Negril Businesses</div>
+<h2>Discover Negril</h2>
+
+<p class="intro">
+A showcase of advertising creative featuring Negril's hospitality, dining and local businesses.
+</p>
+
+<div class="gallery">
+
+<figure>
+<img src="assets/welcome%20to%20salt%20and%20sand.png" alt="Salt + Sand Boutique Resort and Mr Delicious advertisement" loading="lazy">
+<figcaption>Salt + Sand Boutique Resort / Mr Delicious</figcaption>
+</figure>
+
+<figure>
+<img src="assets/Sunrise%20Club%20Tropical%20Welcome.png" alt="Sunrise Club advertisement" loading="lazy">
+<figcaption>Sunrise Club</figcaption>
+</figure>
+
+<figure>
+<img src="assets/Travellers%20Beach%20Resort%20Welcome%20Scene.png" alt="Travellers Beach Resort welcome advertisement" loading="lazy">
+<figcaption>Travellers Beach Resort</figcaption>
+</figure>
+
+<figure>
+<img src="assets/negril%20food%20shack.png" alt="Negril Food Shack and Juice Spot advertisement" loading="lazy">
+<figcaption>Negril Food Shack &amp; Juice Spot</figcaption>
+</figure>
+
+<figure>
+<img src="assets/current%20mood%20take%20out.png" alt="Current Mood advertisement" loading="lazy">
+<figcaption>Current Mood — Bar, Kitchen &amp; Blends</figcaption>
+</figure>
+
+<figure>
+<img src="assets/located%20beach%20club.png" alt="Jasmine Grant Spa and Wellness Services advertisement" loading="lazy">
+<figcaption>Jasmine Grant Spa &amp; Wellness Services — located at Negril Beach Club</figcaption>
+</figure>
+
+</div>
+
+<p class="intro" style="margin-top:25px">
+These are examples of supplied advertising artwork; inclusion does not imply a particular screen placement or endorsement.
+</p>
+
+</div>
+</section>
+
+<!-- SCREEN HOSTS -->
+
+<section class="section" id="screen-hosts">
+
+<div class="eyebrow center">Our Negril Screen Hosts</div>
+<h2>Meet Our Screen Hosts</h2>
+
+<p class="intro">
+Local businesses helping connect visitors and residents with advertising across our network.
+</p>
+
+<div class="destinations" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))">
+
+<article class="tile">
+<h3>Jasmine Grant Spa &amp; Wellness Services</h3>
+<p><strong>Screen host</strong> — located at Negril Beach Club, Negril, Jamaica.</p>
+<p>Negril Beach Club identifies the business location; Jasmine Grant Spa &amp; Wellness Services is the screen host.</p>
+</article>
+
+</div>
+</section>
+
+<!-- ADVERTISING PACKAGES -->
+
+<section class="section" id="packages">
+
+<div class="eyebrow center">Advertising Packages</div>
+<h2>Simple, Flexible Pricing</h2>
+
+<p class="intro">
+Choose your advertising term and number of screens. All amounts are in USD and billed upfront for the full term.
+</p>
+
+<div class="discount" style="margin:0 0 28px;background:#fff;border:1px solid #dbe6e2;text-align:left">
+<h3 style="text-align:center">Your Advertisement, Your Message — 15 Seconds per Placement</h3>
+<p>Each advertising placement provides <strong>15 seconds of screen time per rotation</strong>. Your advertisement can include <strong>video, photographs, graphics, text, animation, or a combination</strong> of these formats.</p>
+<p>Want a longer message? Book <strong>two consecutive 15-second placements for a 30-second advertisement</strong> at <strong>twice the standard monthly rate</strong>. Additional 15-second placements are charged at the same per-placement rate.</p>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;min-width:450px;text-align:center">
+<thead><tr style="background:#062c35;color:white"><th style="padding:12px">Advertising term</th><th style="padding:12px">15 seconds</th><th style="padding:12px">30 seconds (2 placements)</th></tr></thead>
+<tbody><tr><td style="padding:12px;border-bottom:1px solid #dbe6e2">3 months</td><td style="padding:12px;border-bottom:1px solid #dbe6e2">$60/month</td><td style="padding:12px;border-bottom:1px solid #dbe6e2">$120/month</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #dbe6e2">6 months</td><td style="padding:12px;border-bottom:1px solid #dbe6e2">$40/month</td><td style="padding:12px;border-bottom:1px solid #dbe6e2">$80/month</td></tr>
+<tr><td style="padding:12px">12 months</td><td style="padding:12px">$30/month</td><td style="padding:12px">$60/month</td></tr></tbody></table></div>
+<p style="font-size:14px;text-align:center;margin-bottom:0">All prices are <strong>USD per screen per month</strong>, payable upfront for the full selected term. Placement length refers to each appearance in the screen's advertising rotation.</p>
+</div>
+
+<div class="packages">
+
+<article class="package center">
+<h3>3 Months</h3>
+<div class="price">$60</div>
+<p>USD per 15-second placement, per screen/month<br><strong>$180 total per screen</strong></p>
+<a class="btn" href="payment.html">Select Package</a>
+</article>
+
+<article class="package center">
+<h3>6 Months</h3>
+<div class="price">$40</div>
+<p>USD per 15-second placement, per screen/month<br><strong>$240 total per screen</strong></p>
+<a class="btn" href="payment.html">Select Package</a>
+</article>
+
+<article class="package center">
+<h3>12 Months</h3>
+<div class="price">$30</div>
+<p>USD per 15-second placement, per screen/month<br><strong>$360 total per screen</strong></p>
+<a class="btn" href="payment.html">Select Package</a>
+</article>
+
+</div>
+
+<div class="discount">
+<h3>Advertise on 5 or 10 Screens</h3>
+<p>Receive an additional <strong>10% discount</strong> when choosing a 5-screen or 10-screen package, subject to availability.</p>
+<a class="btn" href="payment.html">Choose Screens &amp; Checkout</a>
+</div>
+
+</section>
+
+<!-- BECOME A HOST -->
+
+<section class="host" id="host">
+<div class="host-inner">
+
+<div>
+<div class="eyebrow">Partnership Opportunities</div>
+<h2>Become a Screen Host</h2>
+<p>
+Partner with Halifax Virtual Media Masters &amp; Events Ltd. and earn a share of qualifying advertising and QR referral revenue under our established host terms.
+</p>
+<a class="btn" href="#contact">Contact Us About Hosting</a>
+</div>
+
+<div class="shares">
+<div class="share">
+<strong>25%</strong>
+Advertising revenue share
+</div>
+<div class="share">
+<strong>50%</strong>
+QR referral commission share
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT FORM -->
+
+<section class="section" id="contact">
+
+<div class="eyebrow center">Get in Touch</div>
+<h2>Advertising, Digital Signage &amp; Hosting Inquiries</h2>
+
+<p class="intro">
+Tell us about your business and whether you need advertising, digital signage, a digital menu system or a screen-hosting partnership.
+</p>
+
+<div class="form-wrap">
+
+<form id="inquiry-form" action="https://api.web3forms.com/submit" method="POST">
+
+<input type="hidden" name="access_key" value="1c442771-1a55-4db1-b1cd-6976c0d45d28">
+<input type="hidden" name="subject" value="Jamaica Advertising Network Inquiry">
+<input type="hidden" name="from_name" value="Jamaica Advertising Network Website">
+
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+<div class="fields">
+
+<label class="field">
+Business name *
+<input name="Business name" autocomplete="organization" required>
+</label>
+
+<label class="field">
+Owner / contact name *
+<input name="Owner / contact name" autocomplete="name" required>
+</label>
+
+<label class="field full">
+Business address *
+<input name="Business address" autocomplete="street-address" required>
+</label>
+
+<label class="field">
+Phone number *
+<input name="Phone number" type="tel" autocomplete="tel" required>
+</label>
+
+<label class="field">
+Email address *
+<input name="email" type="email" autocomplete="email" required>
+</label>
+
+<label class="field full">
+I'm interested in *
+<select name="Inquiry type" required>
+<option value="" selected disabled>Select an option</option>
+<option>Advertising</option>
+<option>Digital signage or digital menu boards</option>
+<option>Interactive touchscreen solutions</option>
+<option>Hosting a screen</option>
+<option>Both advertising and hosting</option>
+</select>
+</label>
+
+<label class="field full">
+Additional information
+<textarea name="Message" rows="4"></textarea>
+</label>
+
+</div>
+
+<button class="btn" id="inquiry-submit" type="submit">Send Inquiry</button>
+
+<p id="inquiry-status" role="status" aria-live="polite" style="margin:14px 0 0;line-height:1.6" hidden></p>
+
+</form>
+
+</div>
+</section>
+
+<!-- FINAL CALL TO ACTION -->
+
+<section class="hero" style="padding:65px 20px">
+<h2 style="font-size:clamp(30px,4vw,48px)">Ready to Advertise?</h2>
+<p>Choose your package and continue to our payment page.</p>
+<a class="btn" href="payment.html">View Packages &amp; Payments</a>
+</section>
+
+</main>
+
+<footer class="foot">
+© 2026 Halifax Virtual Media Masters &amp; Events Ltd. · Jamaica Advertising Network ·
+<a href="payment.html">Advertising Packages &amp; Payments</a>
+</footer>
+
+<script>
+(function () {
+  const form = document.getElementById('inquiry-form');
+  const button = document.getElementById('inquiry-submit');
+  const status = document.getElementById('inquiry-status');
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    button.disabled = true;
+    button.textContent = 'Sending...';
+
+    status.hidden = false;
+    status.style.color = '#173139';
+    status.textContent = 'Submitting your inquiry...';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'The inquiry could not be sent.');
+      }
+
+      status.style.color = '#17633c';
+      status.textContent = 'Thank you! Your inquiry has been submitted successfully. We will be in touch soon.';
+      form.reset();
+
+    } catch (error) {
+      status.style.color = '#a12b2b';
+      status.textContent = 'Your inquiry could not be sent. Please try again shortly. ' + (error.message || '');
+
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Send Inquiry';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
